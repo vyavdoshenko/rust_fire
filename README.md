@@ -4,3 +4,5 @@
 ```
 $ cargo run --release
 ```
+
+![The Fire Demo](demo/fire.gif)

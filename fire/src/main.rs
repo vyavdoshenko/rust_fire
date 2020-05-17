@@ -52,7 +52,7 @@ fn temperature_to_color(temperature: u8) -> types::Color {
 
 fn fill_temperatures(buffer: &mut Vec<Vec<u8>>) {
     let mut rng = thread_rng();
-    for x in (0..WIDTH+2).rev() {
+    for x in (0..WIDTH + 2).rev() {
         buffer[(HEIGHT / 2 - 1) as usize][x as usize] = rng.gen_range(0, 255) as u8;
     }
 }

@@ -94,19 +94,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "08c48aae112d48ed9f069b33538ea9e3e90aa263cfa3d1c24309612b1f7472de"
 
 [[package]]
-name = "camera_controllers"
-version = "0.31.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a5488a8dbe3f8453c25f0540c3c31af24aeb6dee36c77f9d8ea8c78c76633659"
-dependencies = [
- "bitflags",
- "piston3d-cam",
- "pistoncore-input",
- "quaternion",
- "vecmath",
-]
-
-[[package]]
 name = "cc"
 version = "1.0.53"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -283,28 +270,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bb1f6b1ce1c140482ea30ddd3335fc0024ac7ee112895426e0a629a6c20adfe3"
 
 [[package]]
-name = "find_folder"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f6d018fb95a0b59f854aed68ecd96ce2b80af7911b92b1fed3c4b1fa516b91b"
-
-[[package]]
 name = "fire"
 version = "0.1.0"
 dependencies = [
- "camera_controllers",
- "find_folder",
- "gfx",
- "gfx_device_gl",
- "image",
- "piston-ai_behavior",
- "piston2d-deform_grid",
- "piston2d-drag_controller",
- "piston2d-sprite",
  "piston_window",
- "rand 0.6.5",
- "shader_version",
- "vecmath",
+ "rand",
 ]
 
 [[package]]
@@ -811,17 +781,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "piston-ai_behavior"
-version = "0.31.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fa27af3fe9208a668af67bf296fa50b2e3353f67b0dd5112192c13ccd5464e10"
-dependencies = [
- "pistoncore-input",
- "serde",
- "serde_derive",
-]
-
-[[package]]
 name = "piston-float"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -867,24 +826,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "piston2d-deform_grid"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ce983a7093e2e458c1c61ca2dcf9a7bd9adc134cc99dd87460c53bf3990f8142"
-dependencies = [
- "piston2d-graphics",
-]
-
-[[package]]
-name = "piston2d-drag_controller"
-version = "0.29.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "885d3fad2d026b30a68a5d07cb4e3169e6b48b1d5bb8dd5354a8525b1e1bfed6"
-dependencies = [
- "pistoncore-input",
-]
-
-[[package]]
 name = "piston2d-gfx_graphics"
 version = "0.68.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -910,29 +851,6 @@ dependencies = [
  "piston-viewport",
  "read_color",
  "rusttype 0.8.3",
- "vecmath",
-]
-
-[[package]]
-name = "piston2d-sprite"
-version = "0.59.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "401e0a12b4ed3e65c069b0804e811bccab99216b95b9ee714ecc08ed983c8487"
-dependencies = [
- "interpolation",
- "piston-ai_behavior",
- "piston2d-graphics",
- "pistoncore-input",
- "uuid",
-]
-
-[[package]]
-name = "piston3d-cam"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c29bb5a44b7cf1b86c133c3dfa734e81f1cfb1347e4ad7d48b611f28d7b75120"
-dependencies = [
- "quaternion",
  "vecmath",
 ]
 
@@ -1034,15 +952,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "quaternion"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "098443236d1445368525aa1874295cb9d9fc7699b52907c78692f0b18bd8c216"
-dependencies = [
- "vecmath",
-]
-
-[[package]]
 name = "quote"
 version = "0.6.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1058,19 +967,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "42934bc9c8ab0d3b273a16d8551c8f0fcff46be73276ca083ec2414c15c4ba5e"
 dependencies = [
  "proc-macro2 1.0.13",
-]
-
-[[package]]
-name = "rand"
-version = "0.4.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "552840b97013b1a26992c11eac34bdd778e464601a4c2054b5f0bff7c6761293"
-dependencies = [
- "fuchsia-cprng",
- "libc",
- "rand_core 0.3.1",
- "rdrand",
- "winapi",
 ]
 
 [[package]]
@@ -1408,16 +1304,6 @@ name = "unicode-xid"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "826e7639553986605ec5979c7dd957c7895e93eabed50ab2ffa7f6128a75097c"
-
-[[package]]
-name = "uuid"
-version = "0.6.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e1436e58182935dcd9ce0add9ea0b558e8a87befe01c1a301e6020aeb0876363"
-dependencies = [
- "cfg-if",
- "rand 0.4.6",
-]
 
 [[package]]
 name = "vecmath"
